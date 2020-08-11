@@ -192,8 +192,8 @@ it on. That's why PostgreSQL doesn't turn it on by default.
  index_lesson_enrollments_on_lesson_id                         |   93 MB
 ```
 
-This command displays the total size of all indexes on the database, in MB. It
-is calculated by taking the number of pages (reported in `relpages`) and
+This command displays the size of each index in the database, in MB. It is
+calculated by taking the number of pages (reported in `relpages`) and
 multiplying it by the page size (8192 bytes).
 
 ---
