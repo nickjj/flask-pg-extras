@@ -17,8 +17,8 @@ database.
 - [Ensuring the `pg-extras` command is available](#ensuring-the-pg-extras-command-is-available)
 - [Going over the `pg-extras` sub-commands](#going-over-the-pg-extras-sub-commands)
 - [FAQ](#faq)
-  - [What about MySQL, MS SQL and SQLite?](#what-about-mysql%2C-ms-sql-and-sqlite%3F)
-  - [Is it safe to run this against your production database?](#-is-it-safe-to-run-this-against-your-production-database-%3F)
+  - [What about MySQL, MS SQL and SQLite?](#what-about-mysql-ms-sql-and-sqlite)
+  - [Is it safe to run this against your production database?](#is-it-safe-to-run-this-against-your-production-database)
 - [About the Author](#about-the-author)
 
 ## Installation
@@ -535,7 +535,7 @@ vacuumed.
 
 ## FAQ
 
-#### What about MySQL, MS SQL and SQLite?
+### What about MySQL, MS SQL and SQLite?
 
 While this extension does use SQLAlchemy, it's only using it to piggy back off
 your existing connection details and to execute raw SQL queries.
@@ -544,7 +544,7 @@ A majority of the queries are accessing specific tables that only exist within
 PostgreSQL, such as `pg_*` tables. That's why it will not work with any other
 database.
 
-#### Is it safe to run this against your production database?
+### Is it safe to run this against your production database?
 
 You can run these commands in development to get a feel for things but this
 extension is meant to be run against your production database to help figure
