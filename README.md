@@ -14,7 +14,7 @@ database.
 - [Installation](#installation)
 - [Ensuring the `pg-extras` command is available](#ensuring-the-pg-extras-command-is-available)
 - [Going over the `pg-extras` sub-commands](#going-over-the-pg-extras-sub-commands)
-- [Running these commands on your production database](#running-these-commands-on-your-production-database)
+- [Running these commands against your production database](#running-these-commands-against-your-production-database)
 - [About the Author](#about-the-author)
 
 ## Installation
@@ -533,7 +533,7 @@ vacuumed.
 
 ---
 
-## Running these commands on your production database
+## Running these commands against your production database
 
 You can run these commands in development to get a feel for things but this
 extension is meant to be run against your production database to help figure
