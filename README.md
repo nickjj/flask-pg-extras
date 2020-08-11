@@ -11,32 +11,32 @@ index usage, buffer cache hit ratios, query times and more.
 This could be useful when trying to analyze and improve the performance of your
 database.
 
+## Table of contents
+
 - [Installation](#installation)
 - [Ensuring the `pg-extras` command is available](#ensuring-the-pg-extras-command-is-available)
 - [Going over the `pg-extras` sub-commands](#going-over-the-pg-extras-sub-commands)
-- [Running these commands against your production database](#running-these-commands-against-your-production-database)
+- [FAQ](#faq)
+  - [What about MySQL, MS SQL and SQLite?](#what-about-mysql%2C-ms-sql-and-sqlite%3F)
+  - [Is it safe to run this against your production database?](#-is-it-safe-to-run-this-against-your-production-database-%3F)
 - [About the Author](#about-the-author)
 
 ## Installation
 
 `pip install Flask-PG-Extras`
 
-*This extension has Flask 1.0+ and SQLAlchemy 1.3+ as installation dependencies
-which means your app will need to be using those versions or higher. Using
-either SQLAlchemy or Flask-SQLAlchemy is fine btw.*
+In order to use this extension you'll need to be using:
 
-#### Example directory structure for a 'hello' app
-
-```
-├── hello
-│   ├── __init__.py
-│   ├── app.py
-└── requirements.txt
-```
+- Python 3.6+
+- Flask 1.0+
+- SQLAlchemy 1.3+ (Flask-SQLAlchemy is also fine)
+- PostgreSQL 9.x+
 
 #### Flask app factory example using this extension
 
 ```py
+# app.py
+
 from flask import Flask
 from flask_pg_extras import FlaskPGExtras
 
@@ -533,7 +533,18 @@ vacuumed.
 
 ---
 
-## Running these commands against your production database
+## FAQ
+
+#### What about MySQL, MS SQL and SQLite?
+
+While this extension does use SQLAlchemy, it's only using it to piggy back off
+your existing connection details and to execute raw SQL queries.
+
+A majority of the queries are accessing specific tables that only exist within
+PostgreSQL, such as `pg_*` tables. That's why it will not work with any other
+database.
+
+#### Is it safe to run this against your production database?
 
 You can run these commands in development to get a feel for things but this
 extension is meant to be run against your production database to help figure
@@ -547,7 +558,8 @@ of this extension to get an idea of what's being run since you may run these
 commands against your production database.
 
 Some of these queries are above my pay grade to fully understand but I trust
-the folks over at Heroku.
+the folks over at Heroku. Many thousands of people are running these exact
+queries against their Heroku PostgreSQL databases.
 
 ## About the author
 
