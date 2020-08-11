@@ -91,7 +91,7 @@ Options:
 Commands:
   ...
 
-  pg-extras  Obtain useful information from PostgreSQL.
+  pg-extras  Obtain useful information from your PostgreSQL database.
   
   ...
 ```
@@ -107,7 +107,7 @@ Running `flask pg-extras` will produce this help menu:
 
 Usage: flask pg-extras [OPTIONS] COMMAND [ARGS]...
 
-  Obtain useful information from PostgreSQL.
+  Obtain useful information from your PostgreSQL database.
 
 Options:
   --help  Show this message and exit.
