@@ -35,7 +35,7 @@ In order to use this extension you'll need to be using:
 #### Flask app factory example using this extension
 
 ```py
-# app.py
+# hello/app.py
 
 from flask import Flask
 from flask_pg_extras import FlaskPGExtras
