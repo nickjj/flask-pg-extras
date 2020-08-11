@@ -8,8 +8,8 @@ You'll get a bunch of `flask pg-extras` commands that you can use to gain
 insights on your PostgreSQL database. This includes information about locks,
 index usage, buffer cache hit ratios, query times and more.
 
-These could be useful when trying to analyze and improve the performance of
-your database.
+This could be useful when trying to analyze and improve the performance of your
+database.
 
 - [Installation](#installation)
 - [Using the newly added Flask CLI command](#using-the-newly-added-flask-cli-command)
