@@ -12,8 +12,8 @@ This could be useful when trying to analyze and improve the performance of your
 database.
 
 - [Installation](#installation)
-- [Using the newly added Flask CLI command](#using-the-newly-added-flask-cli-command)
-- [Going over the `pg-extras` commands](#going-over-the-pg-extras-commands)
+- [Ensuring the `pg-extras` command is available](#ensuring-the-pg-extras-command-is-available)
+- [Going over the `pg-extras` sub-commands](#going-over-the-pg-extras-sub-commands)
 - [Running these commands on your production database](#running-these-commands-on-your-production-database)
 - [About the Author](#about-the-author)
 
@@ -58,7 +58,7 @@ def create_app():
 *A more complete example app can be found in the [tests/
 directory](https://github.com/nickjj/flask-pg-extras/tree/master/tests/example_app).*
 
-## Using the newly added Flask CLI command
+## Ensuring the `pg-extras` command is available
 
 You'll want to make sure to at least set the `FLASK_APP` environment variable:
 
@@ -99,7 +99,7 @@ Commands:
 If all went as planned you should see the new `pg-extras` command added to the
 list of commands.
 
-## Going over the `pg-extras` commands
+## Going over the `pg-extras` sub-commands
 
 Running `flask pg-extras` will produce this help menu:
 
