@@ -10,7 +10,7 @@ setup(
     description="Flask extension to obtain useful information from your PostgreSQL database.",
     license="MIT",
     package_data={"Flask-PG-Extras": ["VERSION"]},
-    packages=["flask_pg_extras"],
+    packages=["flask_pg_extras", "flask_pg_extras.queries"],
     platforms="any",
     python_requires=">=3.6",
     zip_safe=False,
