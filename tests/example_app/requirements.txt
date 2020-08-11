@@ -1,0 +1,2 @@
+Flask==1.1.2
+Flask-PG-Extras==0.1.0

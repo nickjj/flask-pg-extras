@@ -1,0 +1,33 @@
+name: "CI"
+
+on: "push"
+
+jobs:
+  test:
+    runs-on: "ubuntu-latest"
+
+    steps:
+      - uses: "actions/checkout@v2"
+
+      - name: "Set up Python 3.7"
+        uses: "actions/setup-python@v1"
+        with:
+          python-version: "3.7"
+
+      - name: "Lint extension"
+        run: |
+          pip install flake8
+          flake8 . --ignore=E501
+
+      - name: "Install dependencies"
+        run: |
+          pip install Flask==1.1.2 SQLAlchemy==1.3.18 tabulate==0.8.7
+          pip install -e .
+
+      - name: "Ensure pg-extras and child commands are accessible"
+
+        run: |
+          cd tests/example_app
+          flask pg-extras
+        env:
+          FLASK_APP: "example.app"
