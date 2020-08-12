@@ -4,7 +4,7 @@ It's a Flask extension that ports [Heroku's PG Extras
 plugin](https://github.com/heroku/heroku-pg-extras) to Flask / SQLAlchemy
 without needing to use Heroku.
 
-You'll get a bunch of `flask pg-extras` commands that you can use to gain
+You'll get over a dozen `flask pg-extras` commands that you can use to gain
 insights on your PostgreSQL database. This includes information about locks,
 index usage, buffer cache hit ratios, query times and more.
 
