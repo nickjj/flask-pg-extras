@@ -540,9 +540,10 @@ vacuumed.
 While this extension does use SQLAlchemy, it's only using it to piggy back off
 your existing connection details and to execute raw SQL queries.
 
-A majority of the queries are accessing specific tables that only exist within
-PostgreSQL, such as `pg_*` tables. That's why it will not work with any other
-database.
+A majority of the queries are accessing specific extensions, functions and
+tables that only exist within PostgreSQL. If you take a look at the queries
+being run, you'll find references to a few PostgreSQL specific things
+with`pg_*`. That's why it will not work with any other database.
 
 ### Is it safe to run this against your production database?
 
