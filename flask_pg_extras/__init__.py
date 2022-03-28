@@ -32,6 +32,7 @@ def db_execute_results(db, q):
 
     result_fetchall = result.fetchall()
 
-    print(tabulate([list(r) for r in result_fetchall], headers=result.keys()))
+    print(tabulate([list(r) for r in result_fetchall],
+                   headers=result.keys(), tablefmt="psql"))
 
     return result
